@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- El título ahora es "Estilos" -->
     <title>Estilos - El Viejo Fu-Shi Kenpo</title>
     <!-- Script de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -76,50 +75,90 @@
             <div class="container mx-auto px-6">
                 <h2 class="section-title">Los Estilos que Practicamos</h2>
                 <p class="text-center text-lg text-gray-300 max-w-3xl mx-auto mb-12">
-                    En nuestro dojo, honramos dos linajes principales del Kenpo, cada uno con su historia, filosofía y enfoque únicos.
+                    En nuestro dojo, honramos dos linajes principales del Kenpo. Haz clic en cada estilo para conocer su historia, filosofía y enfoque únicos.
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                    
-                    <!-- Tarjeta Fu-Shi Kenpo -->
-                    <div class="bg-kenpo-dark-2 p-8 rounded-lg shadow-xl border border-gray-800 transition-all duration-300 hover:shadow-2xl hover:border-kenpo-accent">
-                        <h3 class="text-3xl font-serif text-kenpo-accent mb-4">Fu-Shi Kenpo</h3>
-                        <p class="text-gray-300 leading-relaxed mb-6">
-                            [Aquí va la información sobre el Fu-Shi Kenpo. Explica su historia, quién fue su creador, cuáles son sus características principales, su filosofía, etc.]
-                        </p>
-                        
-                        <div class="mb-6">
-                            <img src="https://placehold.co/600x400/2a2a2a/444444?text=Foto+del+Creador+o+Logo+Fu-Shi&font=notoserif" alt="Fu-Shi Kenpo" class="rounded-lg shadow-lg border-2 border-gray-700">
-                        </div>
 
-                        <h4 class="font-bold text-xl text-white mb-3">Puntos Clave:</h4>
-                        <ul class="space-y-2 text-gray-300 list-disc list-inside">
-                            <li><strong>Creador:</strong> [Nombre del creador]</li>
-                            <li><strong>Enfoque:</strong> [Ej: Defensa personal directa, movimientos lineales]</li>
-                            <li><strong>Filosofía:</strong> [Breve descripción de su filosofía]</li>
-                            <li><strong>Características:</strong> [Detalles adicionales]</li>
-                        </ul>
+                <!-- Contenedor de Pestañas (Tabs) -->
+                <div class="max-w-5xl mx-auto">
+                    <!-- Botones de Pestañas -->
+                    <div class="flex flex-wrap justify-center gap-4 mb-8">
+                        <button data-target="panel-fushi" class="style-tab py-2 px-6 rounded-lg font-serif text-lg transition duration-300 bg-kenpo-accent text-white">Fu-Shi Kenpo</button>
+                        <button data-target="panel-kosho" class="style-tab py-2 px-6 rounded-lg font-serif text-lg transition duration-300 bg-kenpo-dark text-gray-300 hover:bg-kenpo-accent/50">Kosho Ryu Kenpo</button>
                     </div>
 
-                    <!-- Tarjeta Kosho Ryu Kenpo -->
-                    <div class="bg-kenpo-dark-2 p-8 rounded-lg shadow-xl border border-gray-800 transition-all duration-300 hover:shadow-2xl hover:border-kenpo-accent">
-                        <h3 class="text-3xl font-serif text-kenpo-accent mb-4">Kosho Ryu Kenpo</h3>
-                        <p class="text-gray-300 leading-relaxed mb-6">
-                            [Aquí va la información sobre el Kosho Ryu Kenpo. Su historia, su creador (como James Mitose y la conexión con la familia Yoshida), sus principios filosóficos, el emblema del escudo, etc.]
-                        </p>
-
-                        <div class="mb-6">
-                            <img src="https://placehold.co/600x400/2a2a2a/444444?text=Escudo+Kosho+Ryu&font=notoserif" alt="Kosho Ryu Kenpo" class="rounded-lg shadow-lg border-2 border-gray-700">
-                        </div>
+                    <!-- Contenido de las Pestañas -->
+                    <div class="bg-kenpo-dark-2 p-8 rounded-lg shadow-xl border border-gray-800">
                         
-                        <h4 class="font-bold text-xl text-white mb-3">Puntos Clave:</h4>
-                        <ul class="space-y-2 text-gray-300 list-disc list-inside">
-                            <li><strong>Linaje:</strong> [Ej: James Mitose, Familia Yoshida]</li>
-                            <li><strong>Enfoque:</strong> [Ej: Estudio del movimiento, principios filosóficos]</li>
-                            <li><strong>Filosofía:</strong> [Ej: Relación con el budismo zen, los 12 principios]</li>
-                            <li><strong>Símbolos:</strong> [Significado del escudo, etc.]</li>
-                        </ul>
+                        <!-- Panel Fu-Shi Kenpo -->
+                        <div id="panel-fushi" class="style-panel">
+                            <h3 class="text-3xl font-serif text-kenpo-accent mb-4">Fu-Shi Kenpo</h3>
+                            <p class="text-gray-300 leading-relaxed mb-6">
+                                [Aquí va la información sobre el Fu-Shi Kenpo. Explica su historia, quién fue su creador, cuáles son sus características principales, su filosofía, etc.]
+                            </p>
+                            
+                            <div class="mb-6">
+                                <img src="https://placehold.co/600x400/2a2a2a/444444?text=Foto+del+Creador+o+Logo+Fu-Shi&font=notoserif" alt="Fu-Shi Kenpo" class="rounded-lg shadow-lg border-2 border-gray-700 max-w-lg mx-auto">
+                            </div>
+
+                            <h4 class="font-bold text-xl text-white mb-3">Puntos Clave:</h4>
+                            <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                                <li><strong>Creador:</strong> [Nombre del creador]</li>
+                                <li><strong>Enfoque:</strong> [Ej: Defensa personal directa, movimientos lineales]</li>
+                                <li><strong>Filosofía:</strong> [Breve descripción de su filosofía]</li>
+                                <li><strong>Características:</strong> [Detalles adicionales]</li>
+                            </ul>
+                        </div>
+
+                        <!-- Panel Kosho Ryu Kenpo (ACTUALIZADO) -->
+                        <div id="panel-kosho" class="style-panel hidden">
+                            <h3 class="text-3xl font-serif text-kenpo-accent mb-4">Kosho Ryu Kenpo</h3>
+                        
+                            <div class="mb-6">
+                                <img src="Imagenes/Kosho-Ryu-Logo.png" alt="Kosho Ryu Kenpo" class="rounded-lg shadow-lg border-2 border-gray-700 max-w-lg mx-auto">
+                            </div>
+                            
+                            <!-- Texto traducido insertado y formateado -->
+                            <div class="text-gray-300 leading-relaxed space-y-5">
+                                <h4 class="font-serif text-2xl font-bold text-white mb-2">Conceptos básicos</h4>
+                                <p class="text-lg">
+                                    KO – [antiguo] SHO – [pino] Ryu – [escuela] {antigua escuela del pino}<br>
+                                    KEN – [puño] PO – [ley] {ley del puño}
+                                </p>
+                                <blockquote class="border-l-4 border-kenpo-accent pl-4 my-4 italic text-gray-400 text-lg">
+                                    «Se cree que el nombre del estilo proviene de la memoria de un gran maestro Mitose que recibió un mensaje espiritual de Dios mientras rezaba y meditaba bajo un viejo pino. Este descendiente había cambiado su religión al budismo. Estudió las enseñanzas de Buda y el yoga japonés (el yoga japonés es similar al yoga indio en apariencia). Sin embargo, es diferente. Este mensajero espiritual de Dios le mostró al gran maestro cómo escapar de los atacantes sin sufrir daños físicos, utilizando solo el contacto corporal para ejecutar las artes de empujar y tirar. Como se ha expuesto, un ser humano no tiene derecho a matar o herir a otro ser humano, sino que debe prescindir de las armas para demostrar su pacifismo a los demás. «
+                                </blockquote>
+                                
+                                <p>El Kosho Shorei True and Pure Karate and Kenpo consiste en yoga japonés combinado con ejercicios de defensa personal. Estos incluyen patrones de «paz» y «escape» que hacen un uso extensivo de las artes de salto.</p>
+                                <p>Las artes de salto utilizan predominantemente los grandes músculos de las piernas y, por lo tanto, son muy eficaces para aumentar la frecuencia cardíaca durante su ejecución. Dado que el corazón se especializa en bombear sangre y dar vida, los ejercicios aeróbicos regulares lo fortalecerán.</p>
+                                <p>Un beneficio adicional de estos ejercicios aeróbicos es el desarrollo y fortalecimiento de los vasos sanguíneos que rodean el corazón. Este desarrollo y fortalecimiento de los capilares proporciona una circulación satisfactoria en caso de que los vasos principales del corazón se bloqueen. Los ejercicios de Kosho Shorei mantienen la salud a través de ejercicios aeróbicos eficientes. También se incluye un sistema de nutrición y técnicas para aumentar y mantener la flexibilidad del cuerpo a través de estiramientos.</p>
+                                <p>En Kosho Shorei, se entrena a los alumnos para que sean totalmente conscientes de todos los aspectos de su entorno, para que anticipen toda la psicología y Kosho - Shorei.</p>
+                                <p>Sin embargo, en otro nivel de Kosho - SHOREI se encuentra el sistema religioso coherente con la tradición judeocristiana, al que se añaden las enseñanzas de Buda. En Kosho - Shorei se utiliza la meditación y la recolección de energía como técnicas para desarrollar un estado de reposo necesario para alcanzar la paz interior y la armonía.</p>
+
+                                <h4 class="font-serif text-2xl font-bold text-white pt-4 mb-2">El arte de la autodefensa de Kosho-Ryu</h4>
+                                <p>El Kenpo Jiu-Jitsu es un arte de prácticas de autodefensa del Lejano Oriente. Entre las artes marciales en las que no se utilizan armas, ninguna otra puede superar o compararse con el arte del Kenpo. En cualquier civilización, los enfrentamientos físicos entre individuos son a veces inevitables y, para que una persona pueda salir victoriosa, la autodefensa es esencial.</p>
+                                <p>El Kenpo permite a una persona defenderse con un solo puño contra un oponente agresivo. El poder del Kenpo es milagroso y verdaderamente más allá de la explicación de las palabras. El espíritu más íntimo y verdadero del Kenpo reside en la humildad y el autocontrol, y debe practicarse de acuerdo con la conciencia mental y las creencias en Dios.</p>
+                                <p>El estudiante entrena diligentemente con el desarrollo del espíritu como objetivo principal y, una vez dominados los fundamentos, experimenta por sí mismo con el objetivo de ofrecer contribuciones prácticas al arte. Una parte del arte conocida como Go Shin Jutsu (arte de la autodefensa) es la preservación de los derechos humanos que Dios ha inculcado en cada uno de nosotros. La garantía de la paz y el orden, y la promoción de la felicidad es la humanidad.</p>
+                                <p>El arte del Kenpo es similar al judo atemi. Sin embargo, el arte y la filosofía son diferentes. Los kenpoistas enseñan la ejecución de maniobras y cómo hacer que el oponente se coloque en una posición en la que pueda ser atacado.</p>
+
+                                <h4 class="font-serif text-2xl font-bold text-white pt-4 mb-2">LA JUVENTUD DE HOY</h4>
+                                <p>La generación joven de hoy está cansada de que se le recuerde la iglesia y las filosofías de la religión, «haz el bien y evita el mal». Es necesario abordar ese problema, y el kenpo proporciona ese enfoque.</p>
+                                <p>A medida que los jóvenes de hoy aprenden kenpo, casi sin darse cuenta, se les inculca la fe en Dios. El kenpo fomenta la confianza y sus características se moldean para convertirse en algo fino, limpio y bueno. Sin que se les obligue, están dispuestos a emprender cualquier tarea que se les presente, convirtiéndose así en ciudadanos rectos, respetables y respetuosos con la ley.</p>
+
+                                <h4 class="font-serif text-2xl font-bold text-white pt-4 mb-2">«Reflexión final»</h4>
+                                <p>El Kenpo que se enseña más popularmente en los Estados Unidos proviene del sistema desarrollado en Hawái por el gran gran maestro James M. Mitose, que tiene como alumnos a Thomas Young y al profesor William Chow. Fue en 1976 cuando James Mitose salió de su retiro y restableció el sistema Kosho Ryu Kenpo. Tras su muerte en 1981, su hijo Thomas B. Mitose asumió el cargo de Gran Gran Maestro del sistema. Así, la tradición del Kenpo Mitose, establecida hace veintidós generaciones, continúa y permanece intacta.</p>
+
+                                <h4 class="font-serif text-2xl font-bold text-white pt-4 mb-2">– LEMA –</h4>
+                                <blockquote class="border-l-4 border-gray-500 pl-4 my-4 italic text-gray-400 text-lg">
+                                    Por favor, creed en Dios, respetad la ley, especialmente no utilicéis la violencia ni infringáis la ley por ningún motivo y cooperad con todos los agentes de la ley. Vivid en paz y sed felices. ¡¡¡Gracias!!!
+                                </blockquote>
+                            </div>
+                        </div>
+                        <!-- Fin del Panel Kosho Ryu -->
+
                     </div>
-                </div>
+                </div> <!-- Fin del contenedor de pestañas -->
+
+
             </div>
         </section>
     </main>
@@ -129,9 +168,32 @@
         <p class="text-gray-500">© 2025 Alejandro Batistoni. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Script para el menú móvil (Aunque no hay menú móvil, dejamos la base por si acaso) -->
+    <!-- Script para las pestañas de estilos -->
     <script>
-        // No hay menú móvil que controlar por ahora.
+        const styleTabs = document.querySelectorAll('.style-tab');
+        const stylePanels = document.querySelectorAll('.style-panel');
+
+        styleTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.dataset.target; // ej: "panel-fushi"
+
+                // Desactivar todos los paneles
+                stylePanels.forEach(panel => {
+                    panel.classList.add('hidden');
+                });
+
+                // Quitar estilo activo a todos los botones
+                styleTabs.forEach(t => {
+                    t.classList.remove('bg-kenpo-accent', 'text-white');
+                    t.classList.add('bg-kenpo-dark', 'text-gray-300');
+                });
+
+                // Activar el panel y el botón seleccionados
+                document.getElementById(target).classList.remove('hidden');
+                tab.classList.add('bg-kenpo-accent', 'text-white');
+                tab.classList.remove('bg-kenpo-dark', 'text-gray-300');
+            });
+        });
     </script>
 
 </body>

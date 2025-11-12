@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- El título ahora es "Estilos" -->
+    <title>Estilos - El Viejo Fu-Shi Kenpo</title>
+    <!-- Script de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de Tailwind para un tema oscuro y fuente -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['"Noto Serif"', 'serif']
+                    },
+                    colors: {
+                        'kenpo-dark': '#1a1a1a',
+                        'kenpo-dark-2': '#2a2a2a',
+                        'kenpo-light': '#f5f5f5',
+                        'kenpo-accent': '#b91c1c', // Un rojo oscuro
+                    }
+                },
+            },
+        }
+    </script>
+    <!-- Estilos adicionales -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: '"Noto Serif"', serif;
+            font-weight: 700;
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-serif text-center mb-8 text-kenpo-light;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #b91c1c; /* kenpo-accent */
+            margin: 12px auto 0;
+        }
+    </style>
+</head>
+<body class="bg-kenpo-dark text-kenpo-light antialiased">
+
+    <!-- Header y Navegación -->
+    <header class="bg-black/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <!-- Un logo simple (Enso) que evoca las artes marciales -->
+                <svg class="w-10 h-10 text-kenpo-accent" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 10C27.9086 10 10 27.9086 10 50C10 72.0914 27.9086 90 50 90C67.6893 90 82.721 78.5303 88.0801 62.5M50 10C54.3644 10 58.5985 10.6629 62.5 11.9199M50 10C42.5023 10 35.5059 11.956 29.5 15.4284M88.0801 62.5C89.3371 58.5985 90 54.3644 90 50C90 32.3107 78.5303 17.279 62.5 11.9199M88.0801 62.5C82.721 68.1725 74.3468 72.3308 65.0933 74.5716" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                </svg>
+                <!-- Nombre del Dojo actualizado -->
+                <span class="text-xl md:text-2xl font-serif font-bold text-white">El Viejo Fu-Shi</span>
+            </a>
+            
+            <!-- Menú de navegación - SIMPLIFICADO POR AHORA -->
+            <div id="nav-menu" class="flex items-center space-x-6">
+                <!-- En el futuro, este enlace irá a index.html (la página principal) -->
+                <a href="index.html" class="text-gray-300 hover:text-kenpo-accent transition duration-300">&larr; Volver al Inicio</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección Estilos de Kenpo -->
+        <section id="estilos" class="py-16 md:py-24 bg-kenpo-dark">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Los Estilos que Practicamos</h2>
+                <p class="text-center text-lg text-gray-300 max-w-3xl mx-auto mb-12">
+                    En nuestro dojo, honramos dos linajes principales del Kenpo, cada uno con su historia, filosofía y enfoque únicos.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    
+                    <!-- Tarjeta Fu-Shi Kenpo -->
+                    <div class="bg-kenpo-dark-2 p-8 rounded-lg shadow-xl border border-gray-800 transition-all duration-300 hover:shadow-2xl hover:border-kenpo-accent">
+                        <h3 class="text-3xl font-serif text-kenpo-accent mb-4">Fu-Shi Kenpo</h3>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            [Aquí va la información sobre el Fu-Shi Kenpo. Explica su historia, quién fue su creador, cuáles son sus características principales, su filosofía, etc.]
+                        </p>
+                        
+                        <div class="mb-6">
+                            <img src="https://placehold.co/600x400/2a2a2a/444444?text=Foto+del+Creador+o+Logo+Fu-Shi&font=notoserif" alt="Fu-Shi Kenpo" class="rounded-lg shadow-lg border-2 border-gray-700">
+                        </div>
+
+                        <h4 class="font-bold text-xl text-white mb-3">Puntos Clave:</h4>
+                        <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                            <li><strong>Creador:</strong> [Nombre del creador]</li>
+                            <li><strong>Enfoque:</strong> [Ej: Defensa personal directa, movimientos lineales]</li>
+                            <li><strong>Filosofía:</strong> [Breve descripción de su filosofía]</li>
+                            <li><strong>Características:</strong> [Detalles adicionales]</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tarjeta Kosho Ryu Kenpo -->
+                    <div class="bg-kenpo-dark-2 p-8 rounded-lg shadow-xl border border-gray-800 transition-all duration-300 hover:shadow-2xl hover:border-kenpo-accent">
+                        <h3 class="text-3xl font-serif text-kenpo-accent mb-4">Kosho Ryu Kenpo</h3>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            [Aquí va la información sobre el Kosho Ryu Kenpo. Su historia, su creador (como James Mitose y la conexión con la familia Yoshida), sus principios filosóficos, el emblema del escudo, etc.]
+                        </p>
+
+                        <div class="mb-6">
+                            <img src="https://placehold.co/600x400/2a2a2a/444444?text=Escudo+Kosho+Ryu&font=notoserif" alt="Kosho Ryu Kenpo" class="rounded-lg shadow-lg border-2 border-gray-700">
+                        </div>
+                        
+                        <h4 class="font-bold text-xl text-white mb-3">Puntos Clave:</h4>
+                        <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                            <li><strong>Linaje:</strong> [Ej: James Mitose, Familia Yoshida]</li>
+                            <li><strong>Enfoque:</strong> [Ej: Estudio del movimiento, principios filosóficos]</li>
+                            <li><strong>Filosofía:</strong> [Ej: Relación con el budismo zen, los 12 principios]</li>
+                            <li><strong>Símbolos:</strong> [Significado del escudo, etc.]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-center py-8 border-t border-gray-800 mt-24">
+        <p class="text-gray-500">© 2025 Alejandro Batistoni. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para el menú móvil (Aunque no hay menú móvil, dejamos la base por si acaso) -->
+    <script>
+        // No hay menú móvil que controlar por ahora.
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- El título ahora es "Cinturones" -->
+    <title>Cinturones - El Viejo Fu-Shi Kenpo</title>
+    <!-- Script de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de Tailwind para un tema oscuro y fuente -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['"Noto Serif"', 'serif']
+                    },
+                    colors: {
+                        'kenpo-dark': '#1a1a1a',
+                        'kenpo-dark-2': '#2a2a2a',
+                        'kenpo-light': '#f5f5f5',
+                        'kenpo-accent': '#b91c1c', // Un rojo oscuro
+                    }
+                },
+            },
+        }
+    </script>
+    <!-- Estilos adicionales -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: '"Noto Serif"', serif;
+            font-weight: 700;
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-serif text-center mb-8 text-kenpo-light;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #b91c1c; /* kenpo-accent */
+            margin: 12px auto 0;
+        }
+    </style>
+</head>
+<body class="bg-kenpo-dark text-kenpo-light antialiased">
+
+    <!-- Header y Navegación -->
+    <header class="bg-black/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <!-- Un logo simple (Enso) que evoca las artes marciales -->
+                <svg class="w-10 h-10 text-kenpo-accent" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 10C27.9086 10 10 27.9086 10 50C10 72.0914 27.9086 90 50 90C67.6893 90 82.721 78.5303 88.0801 62.5M50 10C54.3644 10 58.5985 10.6629 62.5 11.9199M50 10C42.5023 10 35.5059 11.956 29.5 15.4284M88.0801 62.5C89.3371 58.5985 90 54.3644 90 50C90 32.3107 78.5303 17.279 62.5 11.9199M88.0801 62.5C82.721 68.1725 74.3468 72.3308 65.0933 74.5716" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                </svg>
+                <span class="text-2xl font-serif font-bold text-white">El Viejo Fu-Shi</span>
+            </a>
+            
+            <!-- Menú de navegación - SIMPLIFICADO POR AHORA -->
+            <div id="nav-menu" class="flex items-center space-x-6">
+                <!-- Por ahora este enlace vuelve a esta misma página, luego será el index.html principal -->
+                <a href="index.html" class="text-gray-300 hover:text-kenpo-accent transition duration-300">&larr; Volver al Inicio</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección Cinturones -->
+        <section id="cinturones" class="py-16 md:py-24 bg-kenpo-dark-2">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">El Camino del Kenpoka</h2>
+                <p class="text-center text-lg text-gray-300 max-w-3xl mx-auto mb-12">
+                    El sistema de cinturones representa el progreso y la dedicación del estudiante. Haz clic en cada cinturón para ver los requisitos detallados.
+                </p>
+
+                <!-- Contenedor de Pestañas (Tabs) -->
+                <div class="max-w-5xl mx-auto">
+                    <!-- Botones de Pestañas -->
+                    <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
+                        <button data-target="panel-blanco" class="belt-tab py-2 px-4 rounded-lg font-serif text-lg transition duration-300 bg-kenpo-accent text-white">Blanco</button>
+                        <button data-target="panel-amarillo" class="belt-tab py-2 px-4 rounded-lg font-serif text-lg transition duration-300 bg-kenpo-dark text-gray-300 hover:bg-kenpo-accent/50">Amarillo</button>
+                        <button data-target="panel-naranja" class="belt-tab py-2 px-4 rounded-lg font-serif text-lg transition duration-300 bg-kenpo-dark text-gray-300 hover:bg-kenpo-accent/50">Naranja</button>
+                        <button data-target="panel-purpura" class="belt-tab py-2 px-4 rounded-lg font-serif text-lg transition duration-300 bg-kenpo-dark text-gray-300 hover:bg-kenpo-accent/50">Púrpura</button>
+                        <button data-target="panel-azul" class="belt-tab py-2 px-4 rounded-lg font-serif text-lg transition duration-300 bg-kenpo-dark text-gray-300 hover:bg-kenpo-accent/50">Azul</button>
+                        <button data-target="panel-verde" class="belt-tab py-2 px-4 rounded-lg font-serif text-lg transition duration-300 bg-kenpo-dark text-gray-300 hover:bg-kenpo-accent/50">Verde</button>
+                        <button data-target="panel-marron" class="belt-tab py-2 px-4 rounded-lg font-serif text-lg transition duration-300 bg-kenpo-dark text-gray-300 hover:bg-kenpo-accent/50">Marrón</button>
+                        <button data-target="panel-negro" class="belt-tab py-2 px-4 rounded-lg font-serif text-lg transition duration-300 bg-kenpo-dark text-gray-300 hover:bg-kenpo-accent/50">Negro</button>
+                    </div>
+
+                    <!-- Contenido de las Pestañas -->
+                    <div class="bg-kenpo-dark p-6 md:p-10 rounded-lg shadow-xl border border-gray-800">
+                        
+                        <!-- Panel Blanco -->
+                        <div id="panel-blanco" class="belt-panel">
+                            <h3 class="text-3xl font-serif text-white mb-4">Cinturón Blanco</h3>
+                            <div class="h-2 rounded-lg bg-white mb-6"></div>
+                            <p class="text-gray-400 mb-6 text-lg">El inicio del camino. Simboliza la pureza, la inocencia y la mente abierta del principiante.</p>
+                            <h4 class="font-bold text-xl text-white mb-3">Requisitos:</h4>
+                            <ul class="space-y-2 text-gray-300 list-disc list-inside text-lg">
+                                <li>Fundamentos básicos de posiciones (stances).</li>
+                                <li>Técnicas básicas de bloqueo y golpe.</li>
+                                <li>Etiqueta y comportamiento en el dojo.</li>
+                                <li>[Agrega más fundamentos aquí]</li>
+                            </ul>
+                        </div>
+
+                        <!-- Panel Amarillo -->
+                        <div id="panel-amarillo" class="belt-panel hidden">
+                            <h3 class="text-3xl font-serif text-yellow-400 mb-4">Cinturón Amarillo</h3>
+                            <div class="h-2 rounded-lg bg-yellow-400 mb-6"></div>
+                            <p class="text-gray-400 mb-6 text-lg">La luz del sol. El estudiante comienza a ver la luz del conocimiento.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="font-bold text-xl text-white mb-3">Requisitos:</h4>
+                                    <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                                        <li><strong>Técnicas:</strong> [Lista de defensas y técnicas]</li>
+                                        <li><strong>Kata:</strong> [Nombre del kata o katas]</li>
+                                        <li><strong>Historia:</strong> [Conocimientos de historia/filosofía]</li>
+                                        <li><strong>Símbolos:</strong> [Símbolos que debe conocer]</li>
+                                        <li><strong>Armas:</strong> [Si aplica, ej: "Iniciación al Bō"]</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl text-white mb-3">Videos o Imágenes:</h4>
+                                    <p class="text-gray-400 mb-4">[Aquí podrás incrustar un video de YouTube o poner imágenes de las técnicas o el kata.]</p>
+                                    <!-- Ejemplo de cómo incrustar un video de YouTube (reemplaza 'VIDEO_ID') -->
+                                    <!-- 
+                                    <div class="aspect-video">
+                                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    -->
+                                    <div class="aspect-video bg-kenpo-dark-2 rounded-lg border border-gray-700 flex items-center justify-center">
+                                        <span class="text-gray-500">[Video Placeholder]</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel Naranja -->
+                        <div id="panel-naranja" class="belt-panel hidden">
+                            <h3 class="text-3xl font-serif text-orange-500 mb-4">Cinturón Naranja</h3>
+                            <div class="h-2 rounded-lg bg-orange-500 mb-6"></div>
+                            <p class="text-gray-400 mb-6 text-lg">La fuerza del sol naciente. El conocimiento comienza a crecer.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="font-bold text-xl text-white mb-3">Requisitos:</h4>
+                                    <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                                        <li><strong>Técnicas:</strong> [Lista de defensas y técnicas]</li>
+                                        <li><strong>Kata:</strong> [Nombre del kata o katas]</li>
+                                        <li><strong>Historia:</strong> [Conocimientos de historia/filosofía]</li>
+                                        <li><strong>Símbolos:</strong> [Símbolos que debe conocer]</li>
+                                        <li><strong>Armas:</strong> [Manejo de armas si se requiere]</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl text-white mb-3">Videos o Imágenes:</h4>
+                                    <div class="aspect-video bg-kenpo-dark-2 rounded-lg border border-gray-700 flex items-center justify-center">
+                                        <span class="text-gray-500">[Video Placeholder]</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel Púrpura -->
+                        <div id="panel-purpura" class="belt-panel hidden">
+                            <h3 class="text-3xl font-serif text-purple-500 mb-4">Cinturón Púrpura</h3>
+                            <div class="h-2 rounded-lg bg-purple-600 mb-6"></div>
+                            <p class="text-gray-400 mb-6 text-lg">La transición. El amanecer antes de un nuevo día de conocimiento.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="font-bold text-xl text-white mb-3">Requisitos:</h4>
+                                    <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                                        <li><strong>Técnicas:</strong> [Lista de defensas y técnicas]</li>
+                                        <li><strong>Kata:</strong> [Nombre del kata o katas]</li>
+                                        <li><strong>Historia:</strong> [Conocimientos de historia/filosofía]</li>
+                                        <li><strong>Símbolos:</strong> [Símbolos que debe conocer]</li>
+                                        <li><strong>Armas:</strong> [Manejo de armas si se requiere]</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl text-white mb-3">Videos o Imágenes:</h4>
+                                    <div class="aspect-video bg-kenpo-dark-2 rounded-lg border border-gray-700 flex items-center justify-center">
+                                        <span class="text-gray-500">[Video Placeholder]</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel Azul -->
+                        <div id="panel-azul" class="belt-panel hidden">
+                            <h3 class="text-3xl font-serif text-blue-500 mb-4">Cinturón Azul</h3>
+                            <div class="h-2 rounded-lg bg-blue-500 mb-6"></div>
+                            <p class="text-gray-400 mb-6 text-lg">El cielo. El estudiante expande su mente y sus habilidades.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="font-bold text-xl text-white mb-3">Requisitos:</h4>
+                                    <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                                        <li><strong>Técnicas:</strong> [Lista de defensas y técnicas]</li>
+                                        <li><strong>Kata:</strong> [Nombre del kata o katas]</li>
+                                        <li><strong>Historia:</strong> [Conocimientos de historia/filosofía]</li>
+                                        <li><strong>Símbolos:</strong> [Símbolos que debe conocer]</li>
+                                        <li><strong>Armas:</strong> [Manejo de armas si se requiere]</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl text-white mb-3">Videos o Imágenes:</h4>
+                                    <div class="aspect-video bg-kenpo-dark-2 rounded-lg border border-gray-700 flex items-center justify-center">
+                                        <span class="text-gray-500">[Video Placeholder]</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel Verde -->
+                        <div id="panel-verde" class="belt-panel hidden">
+                            <h3 class="text-3xl font-serif text-green-500 mb-4">Cinturón Verde</h3>
+                            <div class="h-2 rounded-lg bg-green-600 mb-6"></div>
+                            <p class="text-gray-400 mb-6 text-lg">La planta que crece. Las técnicas y el espíritu florecen.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="font-bold text-xl text-white mb-3">Requisitos:</h4>
+                                    <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                                        <li><strong>Técnicas:</strong> [Lista de defensas y técnicas]</li>
+                                        <li><strong>Kata:</strong> [Nombre del kata o katas]</li>
+                                        <li><strong>Historia:</strong> [Conocimientos de historia/filosofía]</li>
+                                        <li><strong>Símbolos:</strong> [Símbolos que debe conocer]</li>
+                                        <li><strong>Armas:</strong> [Manejo de armas si se requiere]</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl text-white mb-3">Videos o Imágenes:</h4>
+                                    <div class="aspect-video bg-kenpo-dark-2 rounded-lg border border-gray-700 flex items-center justify-center">
+                                        <span class="text-gray-500">[Video Placeholder]</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel Marrón -->
+                        <div id="panel-marron" class="belt-panel hidden">
+                            <h3 class="text-3xl font-serif text-yellow-700 mb-4">Cinturón Marrón</h3>
+                            <div class="h-2 rounded-lg bg-yellow-900 mb-6"></div>
+                            <p class="text-gray-400 mb-6 text-lg">La tierra fértil. El estudiante está listo para madurar.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="font-bold text-xl text-white mb-3">Requisitos:</h4>
+                                    <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                                        <li><strong>Técnicas:</strong> [Lista de defensas y técnicas]</li>
+                                        <li><strong>Kata:</strong> [Nombre del kata o katas]</li>
+                                        <li><strong>Historia:</strong> [Conocimientos de historia/filosofía]</li>
+                                        <li><strong>Símbolos:</strong> [Símbolos que debe conocer]</li>
+                                        <li><strong>Armas:</strong> [Manejo de armas si se requiere]</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl text-white mb-3">Videos o Imágenes:</h4>
+                                    <div class="aspect-video bg-kenpo-dark-2 rounded-lg border border-gray-700 flex items-center justify-center">
+                                        <span class="text-gray-500">[Video Placeholder]</span>
+                                    </div>
+                                D</div>
+                            </div>
+                        </div>
+
+                        <!-- Panel Negro -->
+                        <div id="panel-negro" class="belt-panel hidden">
+                            <h3 class="text-3xl font-serif text-white mb-4">Cinturón Negro</h3>
+                            <div class="h-2 rounded-lg bg-gray-900 border-b border-gray-700 mb-6"></div>
+                            <p class="text-gray-400 mb-6 text-lg">La oscuridad del universo, que contiene todo el conocimiento. No es el final, sino el verdadero comienzo.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="font-bold text-xl text-white mb-3">Requisitos:</h4>
+                                    <ul class="space-y-2 text-gray-300 list-disc list-inside">
+                                        <li><strong>Técnicas:</strong> [Requisitos para 1er Dan]</li>
+                                        <li><strong>Kata:</strong> [Katas avanzados]</li>
+                                        <li><strong>Historia:</strong> [Dominio de la filosofía]</li>
+                                        <li><strong>Símbolos:</strong> [Comprensión profunda]</li>
+                                        <li><strong>Armas:</strong> [Maestría en armas]</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl text-white mb-3">Videos o Imágenes:</h4>
+                                    <div class="aspect-video bg-kenpo-dark-2 rounded-lg border border-gray-700 flex items-center justify-center">
+                                        <span class="text-gray-500">[Video Placeholder]</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> <!-- Fin del contenedor de pestañas -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-center py-8 border-t border-gray-800 mt-24">
+        <p class="text-gray-500">© 2025 Alejandro Batistoni. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para el menú móvil (Aunque no hay menú móvil, dejamos la base por si acaso) -->
+    <script>
+        // No hay menú móvil que controlar por ahora.
+
+        // Lógica para las pestañas de cinturones
+        const beltTabs = document.querySelectorAll('.belt-tab');
+        const beltPanels = document.querySelectorAll('.belt-panel');
+
+        beltTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.dataset.target; // ej: "panel-amarillo"
+
+                // Desactivar todos los paneles
+                beltPanels.forEach(panel => {
+                    panel.classList.add('hidden');
+                });
+
+                // Quitar estilo activo a todos los botones
+                beltTabs.forEach(t => {
+                    t.classList.remove('bg-kenpo-accent', 'text-white');
+                    t.classList.add('bg-kenpo-dark', 'text-gray-300');
+                });
+
+                // Activar el panel y el botón seleccionados
+                document.getElementById(target).classList.remove('hidden');
+                tab.classList.add('bg-kenpo-accent', 'text-white');
+                tab.classList.remove('bg-kenpo-dark', 'text-gray-300');
+            });
+        });
+    </script>
+
+</body>
+</html>

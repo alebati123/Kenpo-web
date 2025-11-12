@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - El Viejo Fu-Shih Kenpo</title>
+    <!-- Script de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de Tailwind para un tema oscuro y fuente -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['"Noto Serif"', 'serif']
+                    },
+                    colors: {
+                        'kenpo-dark': '#1a1a1a',
+                        'kenpo-dark-2': '#2a2a2a',
+                        'kenpo-light': '#f5f5f5',
+                        'kenpo-accent': '#b91c1c', // Un rojo oscuro
+                    }
+                },
+            },
+        }
+    </script>
+    <!-- Estilos adicionales -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: '"Noto Serif"', serif;
+            font-weight: 700;
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-serif text-center mb-8 text-kenpo-light;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #b91c1c; /* kenpo-accent */
+            margin: 12px auto 0;
+        }
+    </style>
+</head>
+<body class="bg-kenpo-dark text-kenpo-light antialiased">
+
+    <!-- Header y Navegación -->
+    <header class="bg-black/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <!-- Un logo simple (Enso) que evoca las artes marciales -->
+                <svg class="w-10 h-10 text-kenpo-accent" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 10C27.9086 10 10 27.9086 10 50C10 72.0914 27.9086 90 50 90C67.6893 90 82.721 78.5303 88.0801 62.5M50 10C54.3644 10 58.5985 10.6629 62.5 11.9199M50 10C42.5023 10 35.5059 11.956 29.5 15.4284M88.0801 62.5C89.3371 58.5985 90 54.3644 90 50C90 32.3107 78.5303 17.279 62.5 11.9199M88.0801 62.5C82.721 68.1725 74.3468 72.3308 65.0933 74.5716" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                </svg>
+                <span class="text-2xl font-serif font-bold text-white">El Viejo Fu-Shih</span>
+            </a>
+            
+            <!-- Menú de navegación -->
+            <div id="nav-menu" class="flex items-center space-x-6">
+                <a href="index.html" class="text-gray-300 hover:text-kenpo-accent transition duration-300">&larr; Volver al Inicio</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección Fundamentos (Posiciones, Bloqueos, etc.) -->
+        <section id="fundamentos" class="py-16 md:py-24 bg-kenpo-dark-2">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Fundamentos del Kenpo</h2>
+                <p class="text-center text-lg text-gray-300 max-w-3xl mx-auto mb-12">
+                    Las bases de nuestro arte. Aquí encontrarás las posiciones, bloqueos, golpes y patadas que forman el pilar de nuestra práctica.
+                </p>
+
+                <!-- Contenedor de Pestañas (Tabs) -->
+                <div class="max-w-5xl mx-auto">
+                    <!-- Botones de Pestañas -->
+                    <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
+                        <button data-target="panel-posiciones" class="fund-tab py-2 px-4 rounded-lg font-serif text-lg transition duration-300 bg-kenpo-accent text-white">Posiciones</button>
+                        <button data-target="panel-bloqueos" class="fund-tab py-2 px-4 rounded-lg font-serif text-lg transition duration-300 bg-kenpo-dark text-gray-300 hover:bg-kenpo-accent/50">Bloqueos</button>
+                        <button data-target="panel-golpes" class="fund-tab py-2 px-4 rounded-lg font-serif text-lg transition duration-300 bg-kenpo-dark text-gray-300 hover:bg-kenpo-accent/50">Golpes</button>
+                        <button data-target="panel-patadas" class="fund-tab py-2 px-4 rounded-lg font-serif text-lg transition duration-300 bg-kenpo-dark text-gray-300 hover:bg-kenpo-accent/50">Patadas</button>
+                    </div>
+
+                    <!-- Contenido de las Pestañas -->
+                    <div class="bg-kenpo-dark p-6 md:p-10 rounded-lg shadow-xl border border-gray-800">
+                        
+                        <!-- Panel Posiciones -->
+                        <div id="panel-posiciones" class="fund-panel">
+                            <h3 class="text-3xl font-serif text-white mb-6">Posiciones (Dachi)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <!-- Plantilla de Imagen (copiar y pegar) -->
+                                <div class="bg-kenpo-dark-2 p-4 rounded-lg shadow-lg border border-gray-700">
+                                    <img src="https://placehold.co/600x400/2a2a2a/444444?text=Zenkutsu-Dachi&font=notoserif" alt="[Nombre Posición]" class="rounded-lg mb-4 w-full h-auto">
+                                    <h4 class="font-serif text-xl text-kenpo-accent text-center">[Zenkutsu Dachi]</h4>
+                                </div>
+                                <!-- Fin Plantilla -->
+                                <div class="bg-kenpo-dark-2 p-4 rounded-lg shadow-lg border border-gray-700">
+                                    <img src="https://placehold.co/600x400/2a2a2a/444444?text=Kiba-Dachi&font=notoserif" alt="[Nombre Posición]" class="rounded-lg mb-4 w-full h-auto">
+                                    <h4 class="font-serif text-xl text-kenpo-accent text-center">[Kiba Dachi]</h4>
+                                </div>
+                                <div class="bg-kenpo-dark-2 p-4 rounded-lg shadow-lg border border-gray-700">
+                                    <img src="https://placehold.co/600x400/2a2a2a/444444?text=Neko-Ashi-Dachi&font=notoserif" alt="[Nombre Posición]" class="rounded-lg mb-4 w-full h-auto">
+                                    <h4 class="font-serif text-xl text-kenpo-accent text-center">[Neko Ashi Dachi]</h4>
+                                </div>
+                                <!-- Agrega más posiciones aquí -->
+                            </div>
+                        </div>
+
+                        <!-- Panel Bloqueos -->
+                        <div id="panel-bloqueos" class="fund-panel hidden">
+                            <h3 class="text-3xl font-serif text-white mb-6">Bloqueos (Uke)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <!-- Plantilla de Imagen (copiar y pegar) -->
+                                <div class="bg-kenpo-dark-2 p-4 rounded-lg shadow-lg border border-gray-700">
+                                    <img src="https://placehold.co/600x400/2a2a2a/444444?text=Age-Uke&font=notoserif" alt="[Nombre Bloqueo]" class="rounded-lg mb-4 w-full h-auto">
+                                    <h4 class="font-serif text-xl text-kenpo-accent text-center">[Age Uke]</h4>
+                                </div>
+                                <!-- Fin Plantilla -->
+                                <div class="bg-kenpo-dark-2 p-4 rounded-lg shadow-lg border border-gray-700">
+                                    <img src="https://placehold.co/600x400/2a2a2a/444444?text=Soto-Uke&font=notoserif" alt="[Nombre Bloqueo]" class="rounded-lg mb-4 w-full h-auto">
+                                    <h4 class="font-serif text-xl text-kenpo-accent text-center">[Soto Uke]</h4>
+                                </div>
+                                <div class="bg-kenpo-dark-2 p-4 rounded-lg shadow-lg border border-gray-700">
+                                    <img src="https://placehold.co/600x400/2a2a2a/444444?text=Gedan-Barai&font=notoserif" alt="[Nombre Bloqueo]" class="rounded-lg mb-4 w-full h-auto">
+                                    <h4 class="font-serif text-xl text-kenpo-accent text-center">[Gedan Barai]</h4>
+                                </div>
+                                <!-- Agrega más bloqueos aquí -->
+                            </div>
+                        </div>
+
+                        <!-- Panel Golpes -->
+                        <div id="panel-golpes" class="fund-panel hidden">
+                            <h3 class="text-3xl font-serif text-white mb-6">Golpes (Tsuki / Uchi)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <!-- Plantilla de Imagen (copiar y pegar) -->
+                                <div class="bg-kenpo-dark-2 p-4 rounded-lg shadow-lg border border-gray-700">
+                                    <img src="https://placehold.co/600x400/2a2a2a/444444?text=Oi-Tsuki&font=notoserif" alt="[Nombre Golpe]" class="rounded-lg mb-4 w-full h-auto">
+                                    <h4 class="font-serif text-xl text-kenpo-accent text-center">[Oi Tsuki]</h4>
+                                </div>
+                                <!-- Fin Plantilla -->
+                                <div class="bg-kenpo-dark-2 p-4 rounded-lg shadow-lg border border-gray-700">
+                                    <img src="https://placehold.co/600x400/2a2a2a/444444?text=Gyaku-Tsuki&font=notoserif" alt="[Nombre Golpe]" class="rounded-lg mb-4 w-full h-auto">
+                                    <h4 class="font-serif text-xl text-kenpo-accent text-center">[Gyaku Tsuki]</h4>
+                                </div>
+                                <div class="bg-kenpo-dark-2 p-4 rounded-lg shadow-lg border border-gray-700">
+                                    <img src="https://placehold.co/600x400/2a2a2a/444444?text=Shuto-Uchi&font=notoserif" alt="[Nombre Golpe]" class="rounded-lg mb-4 w-full h-auto">
+                                    <h4 class="font-serif text-xl text-kenpo-accent text-center">[Shuto Uchi]</h4>
+                                </div>
+                                <!-- Agrega más golpes aquí -->
+                            </div>
+                        </div>
+
+                        <!-- Panel Patadas -->
+                        <div id="panel-patadas" class="fund-panel hidden">
+                            <h3 class="text-3xl font-serif text-white mb-6">Patadas (Geri)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <!-- Plantilla de Imagen (copiar y pegar) -->
+                                <div class="bg-kenpo-dark-2 p-4 rounded-lg shadow-lg border border-gray-700">
+                                    <img src="https://placehold.co/600x400/2a2a2a/444444?text=Mae-Geri&font=notoserif" alt="[Nombre Patada]" class="rounded-lg mb-4 w-full h-auto">
+                                    <h4 class="font-serif text-xl text-kenpo-accent text-center">[Mae Geri]</h4>
+                                </div>
+                                <!-- Fin Plantilla -->
+                                <div class="bg-kenpo-dark-2 p-4 rounded-lg shadow-lg border border-gray-700">
+                                    <img src="https://placehold.co/600x400/2a2a2a/444444?text=Yoko-Geri&font=notoserif" alt="[Nombre Patada]" class="rounded-lg mb-4 w-full h-auto">
+                                    <h4 class="font-serif text-xl text-kenpo-accent text-center">[Yoko Geri]</h4>
+                                </div>
+                                <div class="bg-kenpo-dark-2 p-4 rounded-lg shadow-lg border border-gray-700">
+                                    <img src="https://placehold.co/600x400/2a2a2a/444444?text=Mawashi-Geri&font=notoserif" alt="[Nombre Patada]" class="rounded-lg mb-4 w-full h-auto">
+                                    <h4 class="font-serif text-xl text-kenpo-accent text-center">[Mawashi Geri]</h4>
+                                </div>
+                                <!-- Agrega más patadas aquí -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div> <!-- Fin del contenedor de pestañas -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-center py-8 border-t border-gray-800 mt-24">
+        <p class="text-gray-500">© 2025 Alejandro Batistoni. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para las pestañas de fundamentos -->
+    <script>
+        const fundTabs = document.querySelectorAll('.fund-tab');
+        const fundPanels = document.querySelectorAll('.fund-panel');
+
+        fundTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.dataset.target; // ej: "panel-posiciones"
+
+                // Desactivar todos los paneles
+                fundPanels.forEach(panel => {
+                    panel.classList.add('hidden');
+                });
+
+                // Quitar estilo activo a todos los botones
+                fundTabs.forEach(t => {
+                    t.classList.remove('bg-kenpo-accent', 'text-white');
+                    t.classList.add('bg-kenpo-dark', 'text-gray-300');
+                });
+
+                // Activar el panel y el botón seleccionados
+                document.getElementById(target).classList.remove('hidden');
+                tab.classList.add('bg-kenpo-accent', 'text-white');
+                tab.classList.remove('bg-kenpo-dark', 'text-gray-300');
+            });
+        });
+    </script>
+
+</body>
+</html>
